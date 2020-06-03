@@ -1,5 +1,5 @@
 # Tinder_bot
-It will automatically swipe for u 
+It will automatically swipe for u on tinder web app
 
 TO RUN
 
