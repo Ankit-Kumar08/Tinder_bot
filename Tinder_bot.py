@@ -73,7 +73,15 @@ class TinderBot():
                     try:
                         self.close_popup()
                     except Exception:
+                        pass
+                    try:
                         self.close_match()
+                    except Exception:
+                        pass
+                    try:
+                        self.out_of_likes()
+                    except Exception:
+                        pass
 
     def close_popup(self):
         popup_3 = self.driver.find_element_by_xpath('//*[@id="modal-manager"]/div/div/div[2]/button[2]')
@@ -83,6 +91,11 @@ class TinderBot():
         match_popup = self.driver.find_element_by_xpath('//*[@id="modal-manager-canvas"]/div/div/div[1]/div/div[3]/a')
         match_popup.click()
 
+    #close ur window on out of likes
+    def out_of_likes(self):
+        popup_4 =self.driver.find_element_by_xpath('//*[@id="modal-manager"]/div/div/div[3]/button[2]')
+        self.driver.close()
+        exit()
 
 
 
